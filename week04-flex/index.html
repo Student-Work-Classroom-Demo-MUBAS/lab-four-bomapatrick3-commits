@@ -1,22 +1,21 @@
-<!-- Block elements — each starts on a new line -->
-<div style="background: lightblue; padding: 8px;">I am a block element
-(div)</div>
-<p style="background: lightyellow; padding: 8px;">I am also a block element
-(p)</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2 — Float & Clear</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Float & Clearfix Demo</h1>
 
-<!-- Inline elements — flow within text -->
-<p>I have <span style="background: lightgreen;">an inline span</span>
-and <a href="#">an inline link</a> inside me.</p>
-
-<!-- Inline-block — flows like inline but accepts dimensions -->
-<p>
-<span style="display: inline-block; width: 80px; height: 80px;
-background: coral; text-align: center;
-line-height: 80px;">Box 1</span>
-<span style="display: inline-block; width: 80px; height: 80px;
-background: gold; text-align: center;
-line-height: 80px;">Box 2</span>
-<span style="display: inline-block; width: 80px; height: 80px;
-background: plum; text-align: center;
-line-height: 80px;">Box 3</span>
-</p>
+  <div class="clearfix">
+    <img src="Screenshot 2026-08-22 183207.png" alt="A sample article image" class="article-img">
+    <p>
+      Float was commonly used to create layouts before Flexbox became widely supported.
+        The image is floated to the right, allowing the paragraph text to wrap around it.
+        This technique was originally designed for placing images beside text in articles.
+        Today, Flexbox and CSS Grid are preferred for creating modern page layouts.
+    </p>
+  </div>
+</body>
+</html>

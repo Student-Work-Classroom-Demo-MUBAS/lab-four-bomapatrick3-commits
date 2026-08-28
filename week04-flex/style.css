@@ -1,0 +1,13 @@
+/* Float an image to the right of text — its original purpose */
+.article-img {
+    float: right;
+    width: 200px;
+    margin: 0 0 1rem 1.5rem; /* space around the floated image */
+}
+
+/* clear: both stops elements from wrapping around floated elements */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
