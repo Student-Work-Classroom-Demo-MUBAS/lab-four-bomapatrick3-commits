@@ -1,1 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/KPQ7Q9aM)
+patrick boma bece/22/me/019
+week 04 flex lab
+Task 1: The Display Property — Block, Inline & Inline-Block
+![alt text](<Screenshot 2026-08-28 104633-2.png>)
