@@ -2,20 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Task 2 — Float & Clear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 — Responsive Grid</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Float & Clearfix Demo</h1>
+    <nav class="site-nav">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+<div class="grid">
 
-  <div class="clearfix">
-    <img src="Screenshot 2026-08-22 183207.png" alt="A sample article image" class="article-img">
-    <p>
-      Float was commonly used to create layouts before Flexbox became widely supported.
-        The image is floated to the right, allowing the paragraph text to wrap around it.
-        This technique was originally designed for placing images beside text in articles.
-        Today, Flexbox and CSS Grid are preferred for creating modern page layouts.
-    </p>
-  </div>
+    <div class="card">
+        <h2>Card 1</h2>
+        <p>
+            This is the first responsive card. On mobile screens,
+            the cards appear in a single column.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Card 2</h2>
+        <p>
+            This is the second responsive card. On tablet screens,
+            the cards appear in two columns.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Card 3</h2>
+        <p>
+            This is the third responsive card. On desktop screens,
+            the cards appear in three columns.
+        </p>
+    </div>
+
+</div>
 </body>
 </html>
