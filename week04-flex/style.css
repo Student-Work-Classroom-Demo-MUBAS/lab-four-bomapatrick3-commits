@@ -1,31 +1,132 @@
 
 
-.container {
-  display: flex;
-  flex-direction: row;        /* try: column, row-reverse */
-  justify-content:space-evenly; /* try: center, space-between, space-around, space-evenly */
-  align-items: flex-start;        /* try: center, flex-start, flex-end */
-  flex-wrap: wrap;           /* try: wrap */
-  gap: 1rem;
-  min-height: 200px;           /* gives align-items room to actually show an effect */
-  background: #f0f0f0;
-  padding: 1rem;
-  margin-bottom: 2rem;
-}
-
-.item {
-  flex: 1 1 200px;
-  padding: 1.5rem;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
+.pricing-section {
   text-align: center;
-  border-radius: 8px;
+  padding: 2rem 1rem;
 }
 
-/* Give each box a distinct colour so movement/alignment is obvious */
-.item-1 { background: #e74c3c; }
-.item-2 { background: #3498db; }
-.item-3 { background: #2ecc71; }
-.item-4 { background: #f39c12; }
-.item-5 { background: #9b59b6; }
+/* pricing-table is the FLEX CONTAINER */
+.pricing-table {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch; /* make all cards same height */
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Each .plan is a FLEX ITEM */
+.plan {
+  flex: 1 1 280px; /* grow, shrink, min 280px */
+  max-width: 340px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex; /* plans are ALSO flex containers */
+  flex-direction: column; /* stack content vertically */
+}
+
+.plan h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.plan .price {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.plan .amount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1; /* pushes button down even with short lists */
+}
+
+.plan ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Styled Sign Up / Get Started button */
+.btn {
+  display: block;
+  text-align: center;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: auto; / pushes button to the bottom of each card */
+}
+
+.btn:hover {
+  background: #444;
+}
+
+/* Highlighted middle plan */
+.plan.featured {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  transform: scale(1.05);
+  position: relative;
+}
+
+.plan.featured h3,
+.plan.featured .price,
+.plan.featured .amount {
+  color: white;
+}
+
+.plan.featured ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.plan.featured .btn {
+  background: #f39c12;
+  color: #222;
+}
+
+.plan.featured .btn:hover {
+  background: #e67e22;
+}
+
+/* "Most Popular" badge — positioned top-right of the featured card */
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 1rem;
+  background: #f39c12;
+  color: #222;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE — stack to single column below 700px */
+@media (max-width: 699px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan.featured {
+    transform: scale(1);
+  }
+}
